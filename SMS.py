@@ -173,3 +173,50 @@ class StudentRecordManagement:
                 return
 
         print("No Record found")
+
+
+def main():
+
+    sms = StudentRecordManagement()
+
+    while (True):
+
+        print("1. Add Student")
+        print("2. View All")
+        print("3. Search by Roll #")
+        print("4. Update Record")
+        print("5. Remove a Record")
+        print("6. Delete All")
+        print("7. Exit")
+
+        inputVal = int(input("Enter Your Code: "))
+
+        if(inputVal == 1):
+            sms.addStudent()
+
+        elif(inputVal == 2):
+            sms.viewAll()
+
+        elif(inputVal == 3):
+            sms.searchRoll()
+
+        elif(inputVal == 4):
+            sms.updateRecord()
+
+        elif(inputVal == 5):
+            sms.removeRecord()
+
+        elif(inputVal == 6):
+            sms.deleteAll()
+
+        elif(inputVal == 7):
+            print("Exit")
+            break
+
+        else:
+            print("Invalid Value Code")
+
+
+if __name__ == "__main__":
+    main()
+
